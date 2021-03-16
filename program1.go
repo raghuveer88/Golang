@@ -7,6 +7,7 @@ import (
 
 func main() {
 	fmt.Println("hom many numbers do you want to enter(Range should be from 1 to 200)")
+	//call with manoj
 	var leng int
 	fmt.Scan(&leng)
 	if leng < 0 || leng > 200 {
