@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 )
-
+//PROXY BEGIN main
 func main() {
 	fmt.Println("hom many numbers do you want to enter(Range should be from 1 to 200)")
 	var leng int
@@ -38,7 +38,7 @@ func main() {
 	fmt.Println("Median is ", median)
 
 }
-
+//PROXY END main
 func sort(sortedArray []float64, len int) []float64 {
 	for i := 1; i < len; i++ {
 		temp := sortedArray[i]
