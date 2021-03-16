@@ -39,6 +39,8 @@ func main() {
 
 }
 //PROXY END main
+
+//PROXY BEGIN sort
 func sort(sortedArray []float64, len int) []float64 {
 	for i := 1; i < len; i++ {
 		temp := sortedArray[i]
@@ -50,7 +52,7 @@ func sort(sortedArray []float64, len int) []float64 {
 	}
 	return sortedArray
 }
-
+//PROXY END sort
 type statistics interface {
 	mean() float64
 	median() float64
