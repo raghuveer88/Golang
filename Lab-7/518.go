@@ -37,9 +37,9 @@ func main() {
 	fmt.Println("LOCe x LOCa r value is", r1)
 	fmt.Println("LOCe x Da r value is", r2)
 	fmt.Println("LOCe x Da r value is", r3)
-	t_value1 := cal_tvalue(r1)
-	t_value2 := cal_tvalue(r2)
-	t_value3 := cal_tvalue(r3)
+	t_value1 := cal_tvalue(r1, float64(n))
+	t_value2 := cal_tvalue(r2, float64(n))
+	t_value3 := cal_tvalue(r3, float64(n))
 	//fmt.Println(t_value1, t_value2, t_value3)
 	sigma1 := 1 - simpsonRule(t_value1, float64(n-2))
 	if sigma1 < 0 {
@@ -133,8 +133,8 @@ func cal_r(x []float64, y []float64) float64 {
 	return r
 }
 
-func cal_tvalue(r float64) float64 {
-	t_value := (math.Abs(r) * math.Sqrt(20-2)) / math.Sqrt(1-math.Pow(r, 2))
+func cal_tvalue(r float64, n float64) float64 {
+	t_value := (math.Abs(r) * math.Sqrt(n-2)) / math.Sqrt(1-math.Pow(r, 2))
 	return t_value
 }
 
